@@ -25,14 +25,14 @@ if(this.flag==true)
 {
 	if(this.seconds==0)
 	{
-	   document.getElementById('txt2').innerText = this.seconds;
+	   //document.getElementById('txt2').innerText = this.seconds;
 	   this.updateResult();
 	   return 10;
 	}
 	else
 	{
-	    this.seconds = this.seconds-1;
    	    document.getElementById('txt2').innerText = this.seconds;
+   	    this.seconds = this.seconds-1;
 	    setTimeout("myDelayFunction.delay()",1000);
 	}
 }
