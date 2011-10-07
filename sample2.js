@@ -4,7 +4,7 @@ this.count=0;
 this.seconds=0;
 this.flag=false;
 this.intervalid; 
-this.setdelay = function ()
+this.setcountertimer = function ()
 {
 	this.seconds=5;
 };
@@ -20,7 +20,7 @@ this.display = function()
 	
 };
 
-this.delay = function()
+this.counter = function()
 {
 if(this.flag==true)
 {
@@ -29,7 +29,7 @@ if(this.flag==true)
 	   clearInterval(this.intervalid);
 	   document.getElementById('txt2').innerText = this.seconds;
 	   this.updateResult();
-	   this.intervalid = setInterval("myDelayFunction.delay()",1000);
+	   this.intervalid = setInterval("myDelayFunction.counter()",1000);
 
      }
 	else
@@ -42,11 +42,11 @@ if(this.flag==true)
 
 this.delayeddisplay = function ()
 {
-     this.setdelay();
+     this.setcountertimer();
      this.setcount();
      this.flag=true;
-     this.delay();
-     this.intervalid = setInterval("myDelayFunction.delay()",1000);
+     this.counter();
+     this.intervalid = setInterval("myDelayFunction.counter()",1000);
  };
      
 this.updateResult = function()
@@ -56,15 +56,15 @@ this.updateResult = function()
  	document.getElementById('txt1').innerText="Delayed output";
  	document.getElementById('toggletext').innerText=""; 	document.getElementById('image1').src="/Users/arleen/Desktop/samplejavascript/1315505517-19.jpg";
  	this.count=this.count+1;
- 	this.setdelay();
- 	this.delay();
+ 	this.setcountertimer();
+ 	this.counter();
  	}
  	else
  	{
  	document.getElementById('txt1').innerText="Delayed output2"; 	document.getElementById('image1').src="/Users/arleen/Desktop/samplejavascript/1315505517-28.jpg";
  	this.count=this.count+1;
- 	this.setdelay();
- 	this.delay();
+ 	this.setcountertimer();
+ 	this.counter();
  	}
 };
 
