@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sample JavaScript Example</title>
+</head>
+<body>
+<script language="JavaScript" src="sample2.js">
+</script>
+<div id="container"style="background-color:#EEEEEE;">
+<div id="header" style="background-color:#CDDDBF;height:120px;text-align:center">
+<br>
+<h1 align="center">Welcome! This a JavaScript function example </h1>
+</div>
+<div id="menu" style="background-color:#CDDDB0;width:150px;height:650px;float:left;">
+<div id="sample1" style="background-color:#CDDDB0;text-align:center" onclick=myDelayFunction.display() onmouseover=myDelayFunction.changecolor("sample1") onmouseout=myDelayFunction.reversecolor("sample1")>
+<br>
+<h3>Click</h3>
+</div>
+<div style="background-color:#CDDDB0;text-align:center;" id="txt">
+</div>
+<br>
+<div id="sample2" style="background-color:#CDDDB0;text-align:center;" onmouseover=myDelayFunction.changecolor("sample2") onmouseout=myDelayFunction.reversecolor("sample2")>
+<h3>Delayed Image toggle</h3>
+</div>
+<div style="background-color:#CDDDB0;text-align:center;" id="txt1">
+</div>
+<br>
+<div style="text-align:center;">
+<input type="button" value="START" onclick=myDelayFunction.delayeddisplay()>
+<input type="button" value="STOP" onclick=myDelayFunction.stop()></div>
+</div>
+<div id="content" style="background-color:#CDDDCE;width:1114px;height:650px;text-align:center;float:left;">
+<br><br><br>
+<div style="background-color:#CDDDCE;text-align:center;color:red;font-size:32pt;" id="txt2">
+<br>
+</div>
+<div id="toggletext" width:1114px;height:650px;text-align:center;">
+<h2>
+Image will be toggled for every 5 seconds.
+Click Delayed toggle output!!!
+</h2>
+</div>
+<br>
+<img id='image1' ></img>
+</div>
+</div>
+</body>
+</html>
