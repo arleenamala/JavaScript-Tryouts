@@ -9,73 +9,79 @@
 </script>
 <script language="JavaScript" src="raphael.js">
 </script>
-<div id="container"style="background-color:#EEEEEE;width:100%;height:750px;">
+<div id="container"style="background-color:#EEEEEE;width:100%;height:1000px;">
 <div id="header" style="background-color:#CDDDBF;height:120px;text-align:center">
 <br>
 <h1 align="center">Welcome! This a JavaScript Animation example </h1>
 </div>
-<div id="menu" style="background-color:#CDDDB0;width:15%;height:100%;text-align:center;float:left;">
+<div id="menu" style="background-color:#CDDDB0;width:25%;height:100%;text-align:center;float:left;">
 <div id="sample1" style="background-color:#CDDDB0;text-align:center" onclick=myDrawFunction.displayTools() onmouseover=myDrawFunction.changecolor("sample1") onmouseout=myDrawFunction.reversecolor("sample1")>
 <br>
-<h3>Draw</h3>
+<h1>Draw<h1>
 </div>
 
-<button style="background-color:#CDDDCE;text-align:center;font-size:16pt;display:none;" id="tool1" onclick=myDrawFunction.displayget("circleattr") onmouseover=myDrawFunction.changecolor("tool1") onmouseout=myDrawFunction.reversecolor("tool1")>
-Circle
+<button style="background-color:#FFFFFF;text-align:center;display:none;" id="tool1" onclick=myDrawFunction.displayget("circleattr") onmouseover=myDrawFunction.changecolor("tool1") onmouseout=myDrawFunction.reversecolor("tool1")>
+<img src = "/Users/arleen/Downloads/Circle-1.jpg" width=25 height=22 ></img>
 </button>
 <br>
 <div id="circleattr" style="display:none;" >
-X :	<input type = "text" maxlength="3" size="3" id ="x"  value=""><br>
-Y :	<input type = "text" maxlength="3" size="3" id = "y" value =""><br>
-R :	<input type = "text" maxlength="3" size="3" id ="r" value ="">
+X :	<input type = "text" maxlength="2" size="2" id ="x"  value="">
+Y :	<input type = "text" maxlength="2" size="2" id = "y" value ="">
+R :	<input type = "text" maxlength="2" size="2" id ="r" value ="">
 	<br>
 	<button onclick=myDrawFunction.getCircleIP()> OK </button>
 </div>
-<button style="background-color:#CDDDCE;text-align:center;font-size:16pt;display:none;" id="tool2" onclick=myDrawFunction.displayget("rectattr") onmouseover=myDrawFunction.changecolor("tool2") onmouseout=myDrawFunction.reversecolor("tool2")>
-Rectangle
+<button style="background-color:#FFFFFF;text-align:center;display:none;" id="tool2" onclick=myDrawFunction.displayget("rectattr") onmouseover=myDrawFunction.changecolor("tool2") onmouseout=myDrawFunction.reversecolor("tool2")>
+<img src = "/Users/arleen/Downloads/Rectangle.jpg" width=25 height=22 ></img>
 </button>
 <br>
 <div id="rectattr" style="display:none;">
-X :	<input type="text" maxlength="3" size="3" id="x1" value=""><br>
-Y :	<input type="text" maxlength="3" size="3" id="y1" value=""><br>
-L :	<input type="text" maxlength="3" size="3" id="l" value=""><br>
-B :	<input type="text" maxlength="3" size="3" id="b" value=""><br>
-R :<input type="text" maxlength="3" size="3" id="r1" value="">
+X :	<input type="text" maxlength="2" size="2" id="x1" value="">
+Y :	<input type="text" maxlength="2" size="2" id="y1" value="">
+L :	<input type="text" maxlength="2" size="2" id="l" value="">
+B :	<input type="text" maxlength="2" size="2" id="b" value="">
 	<br>
 	<button onclick=myDrawFunction.getRectIP()> OK </button>
 </div>
-<button style="background-color:#CDDDCE;text-align:center;font-size:16pt;display:none;" id="tool3" onclick=myDrawFunction.displayget("squareattr") onmouseover=myDrawFunction.changecolor("tool3") onmouseout=myDrawFunction.reversecolor("tool3")>
-Square
+<button style="background-color:#FFFFFF;text-align:center;display:none;" id="tool3" onclick=myDrawFunction.displayget("squareattr") onmouseover=myDrawFunction.changecolor("tool3") onmouseout=myDrawFunction.reversecolor("tool3")>
+<img src = "/Users/arleen/Downloads/Square.jpg" width=25 height=22 ></img>
 </button>
 <br>
 <div id="squareattr" style="display:none;">
-	<span>X:</span><input type="text" maxlength="3" size="3" id="x2" value=""><br>
-	<span>Y:</span><input type="text" maxlength="3" size="3" id="y2" value=""><br>
-	<span>S:</span><input type="text" maxlength="3" size="3" id="s" value=""><br>
-	<span>R:</span><input type="text" maxlength="3" size="3" id="r2" value="">
+X:<input type="text" maxlength="2" size="2" id="x2" value="">
+Y:<input type="text" maxlength="2" size="2" id="y2" value="">
+S:<input type="text" maxlength="2" size="2" id="s" value="">
 	<br>
 	<button onclick=myDrawFunction.getSquareIP()> OK </button>
 </div>
+<button style="background-color:#FFFFFF;font-size:20pt;text-align:center;display:none;" id="tool5" onclick=myDrawFunction.displayget("textattr")>
+T
+</button>
 <br>
-<div style="background-color:#CDDDB0;text-align:center;font-size:20pt;" id="tool4" onclick=myDrawFunction.clearPaper() onmouseover=myDrawFunction.changecolor("tool4") onmouseout=myDrawFunction.reversecolor("tool4")>
+<div id="textattr" style="display:none;">
+Text:<input type="text" maxlength="22" size="22" id="t1" value="">
+	 <br>
+	 <button onclick=myDrawFunction.getTextIp()> OK </button>
 </div>
+<br>
+<button style="background-color:#FFFFFF;text-align:center;font-size:14pt;display:none;" id="tool4" onclick=myDrawFunction.clearPaper() onmouseover=myDrawFunction.changecolor("tool4") onmouseout=myDrawFunction.reversecolor("tool4")>
+Clear Screen
+</button>
 <br>
 
 <div id="sample2" style="background-color:#CDDDB0;text-align:center;" onmouseover=myDrawFunction.changecolor("sample2") onmouseout=myDrawFunction.reversecolor("sample2")>
-<h3>Animate</h3>
+<h1>Animate</h1>
 </div>
 <div style="text-align:center;">
 <input type="button" value="START" onclick=myDrawFunction.run()>
+<input type="button" value="STOP" onclick=myDrawFunction.stop()>
 </div>
 
 </div>
-<div id="content" style="background-color:#CDDDCE;width:85%;height:100%;text-align:center;float:left;">
+<div id="content" style="background-color:#CDDDCE;width:75%;height:100%;text-align:center;float:left;">
 <br>
 <h3>Raphael js animation library tool<h3>
-<br><br>
-<div style="background-color:#CDDDCE;text-align:center;color:red;font-size:32pt;" id="txt2">
 <br>
-</div>
 <div id="animateobject" style="text-align:center;float:left;">
 </div>
 <br>
